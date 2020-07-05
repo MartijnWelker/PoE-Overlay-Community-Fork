@@ -76,6 +76,16 @@
             </app-item-frame-value>
           </span>
         </ng-container>
+
+        <ng-container *ngIf="tags">
+          <div class="tag-container">
+            <ng-container *ngFor="let tag of groupTags(stat.modifiers)">
+              <span class="tag">
+                {{tag}}
+              </span>
+            </ng-container>
+          </div>
+        </ng-container>
       </ng-container>
     </app-item-frame-value-group>
   </app-item-frame-query>

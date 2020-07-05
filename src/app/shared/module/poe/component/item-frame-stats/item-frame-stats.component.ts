@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core'
-import { Item, Language } from '../../type'
+import { Item, Language, ItemStatModifier } from '../../type'
 
 @Component({
   selector: 'app-item-frame-stats',
@@ -23,6 +23,9 @@ export class ItemFrameStatsComponent {
   @Input()
   public modifierMaxRange: number
 
+  @Input()
+  public tags = false
+
   public getValueClass(id: string): string {
     if (!id || id.length === 0) {
       return ''
@@ -42,5 +45,19 @@ export class ItemFrameStatsComponent {
     }
 
     return ''
+  }
+
+  public groupTags(modifiers: ItemStatModifier[]): string[] {
+    const result: string[] = [];
+
+    for (const modifier of modifiers) {
+      for (const tag of modifier.tags) {
+        if (!result.includes(tag)) {
+          result.push(tag)
+        }
+      }
+    }
+
+    return result
   }
 }

@@ -10,6 +10,7 @@ import { AppTranslationsLoader } from './app-translations.loader'
 import { AppComponent } from './app.component'
 import { LayoutModule } from './layout/layout.module'
 import { OverlayComponent, UserSettingsComponent } from './layout/page'
+import { ModTagsModule } from '@modules/modtags/mod-tags.module'
 
 const routes: Routes = [
   {
@@ -43,6 +44,7 @@ const routes: Routes = [
     MapModule,
     MiscModule,
     BookmarkModule,
+    ModTagsModule,
   ],
   bootstrap: [AppComponent],
 })

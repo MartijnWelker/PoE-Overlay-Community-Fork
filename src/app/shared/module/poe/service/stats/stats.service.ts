@@ -201,6 +201,7 @@ export class StatsService {
               tradeId,
               values: test.slice(1).map((x) => ({ text: x })),
               indistinguishable,
+              modifiers: stat.modifiers || [],
             }
             results.push({
               stat: itemStat,

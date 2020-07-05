@@ -175,6 +175,22 @@ export interface ItemStat {
   values: ItemValue[]
   option: boolean
   indistinguishable: string
+  modifiers: ItemStatModifier[]
+}
+
+export interface ItemStatModifier {
+  id: string
+  name: string
+  group: string
+  domain: number
+  genType: number
+  level: number
+  statMinValue: number
+  statMaxValue: number
+  spawnWeights: {
+    [key: string]: number | undefined
+  }
+  tags: string[]
 }
 
 export interface ItemRequirements {

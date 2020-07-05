@@ -1,0 +1,25 @@
+<div class="row">
+
+  <div class="col-md-6 col-lg-4">
+    <app-card [title]="'modTags.current-mods' | translate">
+      <div class="row">
+        <div class="col">
+          <app-accelerator [label]="'app.shortcut' | translate" [(value)]="settings.currentModTagsInfoKeybinding">
+          </app-accelerator>
+        </div>
+      </div>
+    </app-card>
+  </div>
+
+  <div class="col-md-6 col-lg-4">
+    <app-card [title]="'modTags.possible-mods' | translate">
+      <div class="row">
+        <div class="col">
+          <app-accelerator [label]="'app.shortcut' | translate" [(value)]="settings.possibleModTagsInfoKeybinding">
+          </app-accelerator>
+        </div>
+      </div>
+    </app-card>
+  </div>
+  
+</div>

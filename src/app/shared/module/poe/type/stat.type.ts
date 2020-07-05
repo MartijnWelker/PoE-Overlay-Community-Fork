@@ -1,3 +1,5 @@
+import { ItemStatModifier } from './item.type';
+
 export enum StatType {
   Pseudo = 'pseudo',
   Explicit = 'explicit',
@@ -20,4 +22,5 @@ export interface Stat {
     }
   }
   option?: boolean
+  modifiers?: ItemStatModifier[]
 }
